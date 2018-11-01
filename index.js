@@ -3,9 +3,12 @@ var express = require('express');
 var app = express();
 
 app.get("/", (req, res) => {
-    res.send("hello world");
+    console.log("received requrest");
+    res.send("hello world tester");
 });
 
-app.listen(process.env.PORT || 3000);
+app.listen(process.env.PORT || 3000, () => {
+    console.log("testTing is listeing on port 3000");
+});
 
 module.exports = app;
