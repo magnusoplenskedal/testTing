@@ -3,7 +3,7 @@ var express = require('express');
 var app = express();
 
 app.get("/", (req, res) => {
-    console.log("received requestfrom: " + req.headers['x-forwarded-for']);
+    console.log("received requestfrom: " + req.connection.remoteAddress);
     res.send("Mega test");
 });
 
