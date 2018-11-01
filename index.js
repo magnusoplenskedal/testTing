@@ -4,7 +4,7 @@ var app = express();
 
 app.get("/", (req, res) => {
     console.log("received requrest");
-    res.send("hello world tester");
+    res.send("hello world med npm install");
 });
 
 app.listen(process.env.PORT || 3000, () => {
